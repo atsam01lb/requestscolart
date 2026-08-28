@@ -39,31 +39,11 @@ button { font-family: inherit; }
 .star { color: var(--red); }
 
 /* ===========================================
-   BRAND BADGE (logo mark, built from live web fonts)
+   LOGO — actual brand file, assets/logo.svg
 =========================================== */
-.brand-badge {
-  --size: 64px;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: #050403;
-  border: 2px solid var(--red);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.brand-badge .bb-star { color: var(--red); font-size: calc(var(--size) * .16); line-height: 1; margin-bottom: calc(var(--size) * .02); }
-.brand-badge .bb-script { font-family: var(--font-script); color: var(--ink); font-size: calc(var(--size) * .32); line-height: 1; }
-.brand-badge .bb-bar {
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: .2em;
-  color: var(--red);
-  font-size: calc(var(--size) * .12);
-  margin-top: calc(var(--size) * .06);
-}
+.logo img { height: 40px; width: auto; }
+.hero-badge { width: 132px; margin: 0 auto 28px; filter: drop-shadow(0 12px 34px rgba(0, 0, 0, .5)); }
+.foot-badge img { height: 48px; margin: 0 auto 16px; }
 
 /* ===========================================
    HEADER
@@ -139,8 +119,6 @@ header {
     linear-gradient(180deg, rgba(10, 9, 8, .55) 0%, rgba(10, 9, 8, .8) 55%, rgba(10, 9, 8, .95) 100%),
     linear-gradient(0deg, rgba(20, 8, 6, .5) 0%, transparent 40%);
 }
-
-.hero-badge { margin-bottom: 26px; filter: drop-shadow(0 12px 34px rgba(0, 0, 0, .5)); }
 
 .hero-title {
   font-family: var(--font-display);
