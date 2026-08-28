@@ -323,6 +323,139 @@ header {
 }
 
 /* ===========================================
+   ABOUT REQUESTS BY COLART — benefits, philosophy, FAQ
+=========================================== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.benefit-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px 26px;
+  box-shadow: 0 4px 24px rgba(26, 20, 36, .05);
+  transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s, border-color .35s;
+}
+.benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(100, 40, 120, .25);
+  box-shadow: 0 20px 44px rgba(100, 40, 120, .14);
+}
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+  color: #fff;
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+.benefit-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.benefit-card p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.philosophy-block {
+  max-width: 760px;
+  margin: 76px auto 0;
+  text-align: center;
+  padding: 48px 36px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--purple-dk) 0%, var(--purple) 50%, var(--magenta) 100%);
+  color: #fff;
+}
+.philosophy-kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: rgba(255, 255, 255, .75);
+  margin-bottom: 14px;
+}
+.philosophy-block h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(24px, 3.4vw, 34px);
+  margin-bottom: 18px;
+}
+.philosophy-block p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, .88);
+  margin-bottom: 28px;
+}
+.philosophy-block .btn-pill-gradient {
+  background: #fff;
+  color: var(--purple);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .18);
+}
+.philosophy-block .btn-pill-gradient:hover { background: var(--yellow); color: var(--ink); }
+
+.faq-block { max-width: 760px; margin: 76px auto 0; }
+.faq-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+.faq-list { display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 24px;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--purple);
+  flex-shrink: 0;
+  transition: transform .3s;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+@media (max-width: 560px) {
+  .philosophy-block { padding: 36px 22px; margin-top: 56px; }
+  .faq-block { margin-top: 56px; }
+  .faq-item { padding: 16px 18px; }
+}
+
+/* ===========================================
    BUTTONS (shared pill styles)
 =========================================== */
 .btn-pill-gradient {
