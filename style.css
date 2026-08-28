@@ -90,19 +90,26 @@ header {
   justify-content: center;
   text-align: center;
 }
+/* Hero background photo — assets/hero-bg.jpg (swap the file, same filename,
+   to change it). The brand wash + glow accents sit on top so text stays legible. */
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: linear-gradient(135deg, var(--purple-dk) 0%, var(--purple) 45%, var(--magenta) 100%);
+  background-color: var(--purple-dk);
+  background-image: url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 15% 25%, rgba(220, 220, 60, .14) 0%, transparent 40%),
-    radial-gradient(circle at 85% 75%, rgba(80, 160, 180, .18) 0%, transparent 40%);
+  background:
+    linear-gradient(135deg, rgba(74, 29, 89, .85) 0%, rgba(100, 40, 120, .74) 45%, rgba(200, 20, 120, .7) 100%),
+    radial-gradient(circle at 15% 25%, rgba(220, 220, 60, .16) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(80, 160, 180, .2) 0%, transparent 40%);
   pointer-events: none;
 }
 .hero-inner { position: relative; max-width: 820px; margin: 0 auto; }
