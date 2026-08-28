@@ -71,9 +71,17 @@ header {
   gap: 8px;
 }
 .nav-cta:hover { background: var(--magenta); transform: translateY(-1px); }
+.nav-buttons { display: flex; align-items: center; gap: 10px; }
+.nav-cta-outline {
+  background: transparent;
+  color: var(--purple);
+  border: 1.5px solid var(--purple);
+}
+.nav-cta-outline:hover { background: var(--purple); color: #fff; transform: translateY(-1px); }
 @media (max-width: 600px) {
   header { padding: 12px 20px; }
   .logo img { height: 36px; }
+  .nav-buttons { gap: 8px; }
   .nav-cta { padding: 9px 16px; font-size: 12.5px; }
 }
 
