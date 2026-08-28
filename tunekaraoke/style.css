@@ -361,7 +361,8 @@ table.request-table {
   font-size: 13.5px;
 }
 .request-table input[type="text"],
-.request-table input[type="number"] {
+.request-table select.transpose-input,
+.request-table textarea {
   width: 100%;
   background: rgba(255, 255, 255, .03);
   border: 1px solid var(--line);
@@ -373,10 +374,59 @@ table.request-table {
   outline: none;
   transition: border-color .25s, background .25s;
 }
-.request-table input::placeholder { color: rgba(246, 239, 225, .35); }
-.request-table input:focus { border-color: var(--gold); background: rgba(217, 171, 78, .06); }
-.request-table input[type="number"] { text-align: center; }
+.request-table textarea {
+  display: block;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.4;
+  min-height: 42px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.request-table input::placeholder,
+.request-table textarea::placeholder { color: rgba(246, 239, 225, .35); }
+.request-table input:focus,
+.request-table select.transpose-input:focus,
+.request-table textarea:focus { border-color: var(--gold); background: rgba(217, 171, 78, .06); }
+.request-table select.transpose-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  text-align: center;
+  text-align-last: center;
+  padding-right: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23d9ab4e'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.request-table select.transpose-input option { background: var(--card); color: var(--ink); }
 .td-transpose { width: 120px; }
+
+/* Mobile: fit the request table on one screen, no horizontal scroll —
+   long song/artist names wrap onto a new line inside their cell instead. */
+@media (max-width: 560px) {
+  .request-table-scroll { overflow-x: hidden; }
+  table.request-table { min-width: 0; table-layout: fixed; }
+  .request-table thead th,
+  .request-table tbody td { padding: 8px 6px; }
+  .request-table thead th { font-size: 9.5px; letter-spacing: .02em; white-space: normal; word-break: break-word; }
+  .request-table thead th.col-num,
+  .request-table tbody td:nth-child(1) { width: 9%; }
+  .request-table thead th:nth-child(2),
+  .request-table tbody td:nth-child(2) { width: 39%; }
+  .request-table thead th:nth-child(3),
+  .request-table tbody td:nth-child(3) { width: 32%; }
+  .request-table thead th.col-transpose,
+  .td-transpose { width: 20%; }
+  .row-num { font-size: 12px; }
+  .request-table input[type="text"],
+  .request-table select.transpose-input,
+  .request-table textarea { padding: 7px 4px; font-size: 12.5px; }
+  .request-table select.transpose-input { padding-right: 16px; background-position: right 4px center; }
+  .request-table textarea { min-height: 34px; }
+}
 
 .request-actions {
   display: flex;
