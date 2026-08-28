@@ -3,72 +3,415 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joe's Bar (Batroun) — Coming Soon | Requests by Colart</title>
-<meta name="description" content="Joe's Bar's dedicated requests page is being built by Colart. Check back soon.">
+<title>Joe's Bar (Batroun) — Song Requests</title>
+<meta name="description" content="Joe's Bar, Batroun — karaoke for over 20 years. Learn about us and request your song live.">
 
-<!-- PLACEHOLDER FAVICON — replace ../assets/favicon.svg with your final export -->
-<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<!-- PLACEHOLDER FAVICON — swap assets/favicon.svg for your final export -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Kaushan+Script&family=Lato:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <a href="/" class="logo" aria-label="Requests by Colart — home">
-    <img src="../assets/logo-placeholder.svg" alt="Requests by Colart">
+  <a href="#top" class="logo" aria-label="Joe's Bar — home">
+    <!-- Recreated placeholder brand mark — see the .brand-badge component in style.css -->
+    <div class="brand-badge" style="--size:44px;">
+      <span class="bb-star">★</span>
+      <span class="bb-script">Joe&rsquo;s</span>
+      <span class="bb-bar">BAR</span>
+    </div>
   </a>
-  <a class="back-link" href="/">
-    <i class="fa-solid fa-arrow-left"></i> <span>All Partners</span>
-  </a>
+  <nav class="header-nav">
+    <a href="#about">About Joe's Bar</a>
+    <a href="#request" class="header-cta">Request Your Song</a>
+  </nav>
 </header>
 
-<section class="launching-section">
-  <div class="launching-container">
-    <div class="launching-content">
+<section class="hero" id="top">
+  <!-- Hero background photo: assets/hero-bg.jpg -->
+  <div class="hero-bg"></div>
 
-      <div class="venue-logo">
-        <!-- PLACEHOLDER LOGO for Joe's Bar (Batroun) — replace once the client's final logo is ready -->
-        <img src="../assets/joesbarbatroun-logo-placeholder.svg" alt="Joe's Bar Batroun">
-      </div>
+  <div class="hero-badge brand-badge" style="--size:140px;">
+    <span class="bb-star">★</span>
+    <span class="bb-script">Joe&rsquo;s</span>
+    <span class="bb-bar">★ BAR ★</span>
+  </div>
 
-      <div class="launching-rocket">
-        <div class="launching-rocket-glow"></div>
-        <div class="launching-rocket-circle"><i class="fa-solid fa-rocket"></i></div>
-      </div>
+  <h1 class="hero-title">Joe&rsquo;s Bar</h1>
+  <p class="hero-tagline">Your night. Your song. Your moment.</p>
+  <p class="hero-sub">
+    Batroun's home of karaoke for over 20 years. Grab the mic, pick your song,
+    and become part of the show.
+  </p>
 
-      <span class="launching-eyebrow">
-        <span class="launching-eyebrow-dot"></span> Colart Requests &middot; Joe's Bar, Batroun
-      </span>
+  <div class="hero-nav-buttons">
+    <a class="btn-red" href="#about">About Joe's Bar</a>
+    <a class="btn-outline-red" href="#request">Request Your Song</a>
+  </div>
+</section>
 
-      <h1 class="launching-title">Joe's Bar is <span class="magenta">almost here</span></h1>
+<section class="section" id="about">
+  <div class="section-head">
+    <span class="section-eyebrow"><i class="fa-solid fa-star" style="font-size:10px;"></i> About Joe's Bar</span>
+    <h2>20+ Years of <span class="red-text">Karaoke Nights</span></h2>
+  </div>
 
-      <p class="launching-tagline">
-        We're building Joe's Bar's dedicated requests page — song requests, digital menus and more,
-        powered by Colart. Check back soon!
-      </p>
+  <div class="about-body">
+    <p>
+      For over 20 years, Joe's Bar has been bringing people together through music, good times, and
+      unforgettable nights.
+    </p>
+    <p>
+      Based in the heart of Batroun, Joe's Bar is more than a bar — it's a place where everyone gets a
+      chance to take the mic, sing their favorite songs, and become part of the show.
+    </p>
+    <p>
+      With more than two decades of experience in entertainment and karaoke, Joe's Bar has taken its
+      karaoke experience beyond Batroun, hosting unforgettable karaoke nights and events across Lebanon.
+    </p>
+    <p>
+      From a night out with friends to private celebrations and special events, we bring the energy, the
+      music, and the microphone wherever the party is.
+    </p>
 
-      <div class="launching-buttons">
-        <a class="cta-btn-primary" href="/">
-          <i class="fa-solid fa-arrow-left"></i> All Partners
-        </a>
-        <a class="cta-btn-secondary" href="https://colartdigitalmarketingagency.com" target="_blank" rel="noopener">
-          Discover Colart <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
+    <p class="about-tagline">Your night. Your song. Your moment.</p>
 
-      <div class="launching-quick-info">
-        <span class="launching-info-item">
-          <i class="fa-solid fa-globe"></i> requests.colartdigitalmarketingagency.com/joesbarbatroun
-        </span>
-      </div>
+    <p>
+      Welcome to Joe's Bar — where every voice has a story, and every night is worth singing about.
+    </p>
 
+    <div class="about-cta">
+      <a class="btn-red" href="#request">Take the Mic — Request Your Song</a>
     </div>
   </div>
 </section>
 
+<section class="section section-alt" id="request">
+  <div class="section-head">
+    <span class="section-eyebrow"><i class="fa-solid fa-microphone" style="font-size:10px;"></i> Song Requests</span>
+    <h2>Request <span class="red-text">Your Song</span></h2>
+    <p class="kicker">Fill in as many rows as you like — we'll get your requests on WhatsApp.</p>
+  </div>
+
+  <div class="request-wrap">
+    <div class="request-details">
+      <div class="field">
+        <label for="clientName">Client Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="clientName" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="venue">Venue / Location of the Event <span aria-hidden="true">*</span></label>
+        <input type="text" id="venue" value="Joe's Bar – Batroun" required>
+      </div>
+      <div class="field">
+        <label for="tableSeat">Table No. / Bar Seat <span class="optional">(optional)</span></label>
+        <input type="text" id="tableSeat" placeholder="e.g. Table 5">
+      </div>
+    </div>
+
+    <div class="request-table-scroll">
+      <table class="request-table" id="requestTable">
+        <thead>
+          <tr>
+            <th class="col-num">#</th>
+            <th>Song Name</th>
+            <th>Artist Name</th>
+            <th class="col-transpose">Transpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-num">1</td>
+            <td><input type="text" class="song-input" placeholder="e.g. Sweet Caroline" aria-label="Song name, row 1"></td>
+            <td><input type="text" class="artist-input" placeholder="e.g. Neil Diamond" aria-label="Artist name, row 1"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 1"></td>
+          </tr>
+          <tr>
+            <td class="row-num">2</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 2"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 2"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 2"></td>
+          </tr>
+          <tr>
+            <td class="row-num">3</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 3"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 3"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 3"></td>
+          </tr>
+          <tr>
+            <td class="row-num">4</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 4"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 4"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 4"></td>
+          </tr>
+          <tr>
+            <td class="row-num">5</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 5"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 5"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 5"></td>
+          </tr>
+          <tr>
+            <td class="row-num">6</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 6"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 6"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 6"></td>
+          </tr>
+          <tr>
+            <td class="row-num">7</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 7"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 7"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 7"></td>
+          </tr>
+          <tr>
+            <td class="row-num">8</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 8"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 8"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 8"></td>
+          </tr>
+          <tr>
+            <td class="row-num">9</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 9"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 9"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 9"></td>
+          </tr>
+          <tr>
+            <td class="row-num">10</td>
+            <td><input type="text" class="song-input" placeholder="Song name" aria-label="Song name, row 10"></td>
+            <td><input type="text" class="artist-input" placeholder="Artist name" aria-label="Artist name, row 10"></td>
+            <td class="td-transpose"><input type="number" class="transpose-input" placeholder="0" step="1" aria-label="Transpose, row 10"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="request-actions">
+      <span class="request-hint" id="requestHint">Add at least one song, then send it our way.</span>
+      <div class="request-buttons">
+        <button type="button" class="btn-clear" id="clearBtn">
+          <i class="fa-solid fa-rotate-left"></i> Clear
+        </button>
+        <button type="button" class="btn-whatsapp" id="sendBtn">
+          <i class="fa-brands fa-whatsapp"></i> Send Requests via WhatsApp
+        </button>
+      </div>
+    </div>
+    <p class="request-note">You'll pick your host next — your request goes straight to their WhatsApp.</p>
+  </div>
+</section>
+
+<!-- Two-step modal: choose a host, then the thank-you confirmation -->
+<div class="request-modal" id="requestModal" role="dialog" aria-modal="true">
+  <div class="request-modal-backdrop" id="requestModalBackdrop"></div>
+  <div class="request-modal-card">
+    <button type="button" class="request-modal-close" id="requestModalClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Step 1: choose host -->
+    <div class="modal-step is-active" id="modalStepHost">
+      <div class="modal-step-eyebrow">One quick thing</div>
+      <h3>Who's hosting tonight? Pick your host to send your request.</h3>
+
+      <div class="host-list">
+        <label class="host-option">
+          <input type="radio" name="host" value="joe" data-name="Joe" data-phone="9613126185">
+          <span class="host-card">
+            <span class="host-avatar">J</span>
+            <span class="host-name">Joe</span>
+            <span class="host-radio-dot"></span>
+          </span>
+        </label>
+        <label class="host-option">
+          <input type="radio" name="host" value="mj" data-name="MJ" data-phone="96171663923">
+          <span class="host-card">
+            <span class="host-avatar">MJ</span>
+            <span class="host-name">MJ</span>
+            <span class="host-radio-dot"></span>
+          </span>
+        </label>
+        <label class="host-option">
+          <input type="radio" name="host" value="jp" data-name="J.P" data-phone="96176058117">
+          <span class="host-card">
+            <span class="host-avatar">JP</span>
+            <span class="host-name">J.P</span>
+            <span class="host-radio-dot"></span>
+          </span>
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-whatsapp" id="hostContinueBtn" disabled>Continue</button>
+      </div>
+    </div>
+
+    <!-- Step 2: thank you -->
+    <div class="modal-step" id="modalStepThanks">
+      <div class="request-modal-emoji">🎤</div>
+      <h3>Thank you for your request! Stay tuned for your song — the mic is on its way to you! 🎶</h3>
+      <div class="modal-actions">
+        <button type="button" class="btn-whatsapp" id="modalProceedBtn">
+          <i class="fa-brands fa-whatsapp"></i> Proceed to WhatsApp
+        </button>
+      </div>
+      <a href="#" class="modal-back-link" id="modalBackLink">← Choose a different host</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="#top" class="foot-badge">
+    <div class="brand-badge" style="--size:52px;">
+      <span class="bb-star">★</span>
+      <span class="bb-script">Joe&rsquo;s</span>
+      <span class="bb-bar">BAR</span>
+    </div>
+  </a>
+  <div class="foot-tagline">Your night. Your song. Your moment.</div>
+  <div class="foot-credits">
+    <span>Structured by</span>
+    <a href="https://colartdigitalmarketingagency.com" target="_blank" rel="noopener">Colart Digital Marketing Agency</a>
+    <span class="sep">&middot;</span>
+    <span>Hosted by</span>
+    <a href="/">Requests by Colart</a>
+  </div>
+  <div class="foot-bottom">&copy; <span id="year"></span> Joe's Bar, Batroun &middot; Powered by Colart</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const rows = Array.from(document.querySelectorAll('#requestTable tbody tr'));
+  const hint = document.getElementById('requestHint');
+  const nameInput = document.getElementById('clientName');
+  const venueInput = document.getElementById('venue');
+  const tableSeatInput = document.getElementById('tableSeat');
+
+  const modal = document.getElementById('requestModal');
+  const stepHost = document.getElementById('modalStepHost');
+  const stepThanks = document.getElementById('modalStepThanks');
+  const hostContinueBtn = document.getElementById('hostContinueBtn');
+  const hostRadios = Array.from(document.querySelectorAll('input[name="host"]'));
+  const modalProceedBtn = document.getElementById('modalProceedBtn');
+  const modalCloseBtn = document.getElementById('requestModalClose');
+  const modalBackdrop = document.getElementById('requestModalBackdrop');
+  const modalBackLink = document.getElementById('modalBackLink');
+
+  let pendingMessage = null;
+
+  function resetForm() {
+    nameInput.value = '';
+    venueInput.value = "Joe's Bar – Batroun";
+    tableSeatInput.value = '';
+    rows.forEach(row => {
+      row.querySelector('.song-input').value = '';
+      row.querySelector('.artist-input').value = '';
+      row.querySelector('.transpose-input').value = '';
+    });
+    hostRadios.forEach(r => r.checked = false);
+    hostContinueBtn.disabled = true;
+    [nameInput, venueInput].forEach(el => el.classList.remove('field-error'));
+    hint.textContent = 'Add at least one song, then send it our way.';
+    hint.style.color = '';
+  }
+
+  function showStep(step) {
+    [stepHost, stepThanks].forEach(s => s.classList.remove('is-active'));
+    step.classList.add('is-active');
+  }
+  function openModal() {
+    showStep(stepHost);
+    modal.classList.add('is-open');
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+  }
+
+  hostRadios.forEach(r => r.addEventListener('change', () => {
+    hostContinueBtn.disabled = !hostRadios.some(x => x.checked);
+  }));
+
+  document.getElementById('clearBtn').addEventListener('click', resetForm);
+
+  document.getElementById('sendBtn').addEventListener('click', () => {
+    const name = nameInput.value.trim();
+    const venue = venueInput.value.trim();
+    const tableSeat = tableSeatInput.value.trim();
+
+    nameInput.classList.toggle('field-error', !name);
+    venueInput.classList.toggle('field-error', !venue);
+
+    if (!name || !venue) {
+      hint.textContent = 'Please fill in your name and the venue before sending.';
+      hint.style.color = '#e8574c';
+      return;
+    }
+
+    const entries = [];
+    rows.forEach((row) => {
+      const song = row.querySelector('.song-input').value.trim();
+      const artist = row.querySelector('.artist-input').value.trim();
+      const transpose = row.querySelector('.transpose-input').value.trim();
+      if (!song) return;
+
+      let line = `${entries.length + 1}. ${song}`;
+      if (artist) line += ` – ${artist}`;
+      if (transpose && transpose !== '0') {
+        const sign = transpose.startsWith('-') || transpose.startsWith('+') ? '' : '+';
+        line += ` (Transpose: ${sign}${transpose})`;
+      }
+      entries.push(line);
+    });
+
+    if (entries.length === 0) {
+      hint.textContent = 'Please add at least one song before sending.';
+      hint.style.color = '#e8574c';
+      return;
+    }
+
+    pendingMessage = { name, venue, tableSeat, entries };
+    openModal();
+  });
+
+  hostContinueBtn.addEventListener('click', () => {
+    if (hostContinueBtn.disabled) return;
+    showStep(stepThanks);
+  });
+
+  modalBackLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    showStep(stepHost);
+  });
+
+  modalProceedBtn.addEventListener('click', () => {
+    const chosen = hostRadios.find(r => r.checked);
+    if (!chosen || !pendingMessage) { closeModal(); return; }
+
+    const hostName = chosen.dataset.name;
+    const hostPhone = chosen.dataset.phone;
+    const { name, venue, tableSeat, entries } = pendingMessage;
+
+    let message = `Hi ${hostName}! \u{1F3A4} New song request from ${name} at ${venue}`;
+    if (tableSeat) message += ` (Table/Seat: ${tableSeat})`;
+    message += `:\n\n` + entries.join('\n') + `\n\nThank you!`;
+
+    const url = `https://wa.me/${hostPhone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener');
+
+    closeModal();
+    resetForm();
+    pendingMessage = null;
+  });
+
+  modalCloseBtn.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+</script>
 </body>
 </html>
