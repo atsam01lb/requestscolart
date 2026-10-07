@@ -193,11 +193,11 @@
         </button>
       </div>
     </div>
-    <p class="request-note">You'll pick your host next, then your request goes straight to our WhatsApp.</p>
+    <p class="request-note">Your request goes straight to our WhatsApp.</p>
   </div>
 </section>
 
-<!-- Two-step modal: choose a host, then the thank-you confirmation -->
+<!-- Thank-you confirmation modal -->
 <div class="request-modal" id="requestModal" role="dialog" aria-modal="true">
   <div class="request-modal-backdrop" id="requestModalBackdrop"></div>
   <div class="request-modal-card">
@@ -205,45 +205,8 @@
       <i class="fa-solid fa-xmark"></i>
     </button>
 
-    <!-- Step 1: choose host -->
-    <div class="modal-step is-active" id="modalStepHost">
-      <div class="modal-step-eyebrow">One quick thing</div>
-      <h3>Who's hosting tonight? Pick your host to send your request.</h3>
-
-      <div class="host-list">
-        <label class="host-option">
-          <input type="radio" name="host" value="joe" data-name="Joe">
-          <span class="host-card">
-            <span class="host-avatar">J</span>
-            <span class="host-name">Joe</span>
-            <span class="host-radio-dot"></span>
-          </span>
-        </label>
-        <label class="host-option">
-          <input type="radio" name="host" value="mj" data-name="MJ">
-          <span class="host-card">
-            <span class="host-avatar">MJ</span>
-            <span class="host-name">MJ</span>
-            <span class="host-radio-dot"></span>
-          </span>
-        </label>
-        <label class="host-option">
-          <input type="radio" name="host" value="jp" data-name="J.P">
-          <span class="host-card">
-            <span class="host-avatar">JP</span>
-            <span class="host-name">J.P</span>
-            <span class="host-radio-dot"></span>
-          </span>
-        </label>
-      </div>
-
-      <div class="modal-actions">
-        <button type="button" class="btn-whatsapp" id="hostContinueBtn" disabled>Continue</button>
-      </div>
-    </div>
-
     <!-- Step 2: thank you -->
-    <div class="modal-step" id="modalStepThanks">
+    <div class="modal-step is-active" id="modalStepThanks">
       <div class="request-modal-emoji">🎤</div>
       <h3>Thank you for your request! Stay tuned for your song. The mic is on its way to you! 🎶</h3>
       <div class="modal-actions">
@@ -251,7 +214,6 @@
           <i class="fa-brands fa-whatsapp"></i> Proceed to WhatsApp
         </button>
       </div>
-      <a href="#" class="modal-back-link" id="modalBackLink">← Choose a different host</a>
     </div>
   </div>
 </div>
@@ -284,14 +246,9 @@
   const tableSeatInput = document.getElementById('tableSeat');
 
   const modal = document.getElementById('requestModal');
-  const stepHost = document.getElementById('modalStepHost');
-  const stepThanks = document.getElementById('modalStepThanks');
-  const hostContinueBtn = document.getElementById('hostContinueBtn');
-  const hostRadios = Array.from(document.querySelectorAll('input[name="host"]'));
   const modalProceedBtn = document.getElementById('modalProceedBtn');
   const modalCloseBtn = document.getElementById('requestModalClose');
   const modalBackdrop = document.getElementById('requestModalBackdrop');
-  const modalBackLink = document.getElementById('modalBackLink');
 
   let pendingMessage = null;
 
@@ -304,28 +261,17 @@
       row.querySelector('.artist-input').value = '';
       row.querySelector('.transpose-input').value = '0';
     });
-    hostRadios.forEach(r => r.checked = false);
-    hostContinueBtn.disabled = true;
     [nameInput, venueInput].forEach(el => el.classList.remove('field-error'));
     hint.textContent = 'Add at least one song, then send it our way.';
     hint.style.color = '';
   }
 
-  function showStep(step) {
-    [stepHost, stepThanks].forEach(s => s.classList.remove('is-active'));
-    step.classList.add('is-active');
-  }
   function openModal() {
-    showStep(stepHost);
     modal.classList.add('is-open');
   }
   function closeModal() {
     modal.classList.remove('is-open');
   }
-
-  hostRadios.forEach(r => r.addEventListener('change', () => {
-    hostContinueBtn.disabled = !hostRadios.some(x => x.checked);
-  }));
 
   document.getElementById('clearBtn').addEventListener('click', resetForm);
 
@@ -369,24 +315,12 @@
     openModal();
   });
 
-  hostContinueBtn.addEventListener('click', () => {
-    if (hostContinueBtn.disabled) return;
-    showStep(stepThanks);
-  });
-
-  modalBackLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    showStep(stepHost);
-  });
-
   modalProceedBtn.addEventListener('click', () => {
-    const chosen = hostRadios.find(r => r.checked);
-    if (!chosen || !pendingMessage) { closeModal(); return; }
+    if (!pendingMessage) { closeModal(); return; }
 
-    const hostName = chosen.dataset.name;
     const { name, venue, tableSeat, entries } = pendingMessage;
 
-    let message = `Hi ${hostName}! \u{1F3A4} New song request from ${name} at ${venue}`;
+    let message = `Hi! \u{1F3A4} New song request from ${name} at ${venue}`;
     if (tableSeat) message += ` (Table/Seat: ${tableSeat})`;
     message += `:\n\n` + entries.join('\n') + `\n\nThank you!`;
 
